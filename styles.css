@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(triangles_pattern.png);
+}
+
+.content, .navbar {
+    width: 100%;
+    padding-right: 8%;
+    padding-left: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.logo h1 {
+    display: inline-block;
+    margin-right: -5px;
+}
+
+.logo:first-child h1 {
+    color: rgb(235, 74, 53);
+}
+
+.logo h1:last-child {
+    color: rgb(31, 206, 40);
+}
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1 {
+    flex-basis: 25%;
+    position: relative;
+    margin-right: 50px;
+}
+
+.col-1 h2 {
+    font-size: 72px;
+}
+
+.col-1 p {
+    font-size: 28px;
+    font-weight: 100;
+    margin: 25px 0 30px 0;
+    max-width: 350px;
+}
+
+.col-2 {
+    flex-basis: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 #breakfast {
+    background-image: url(breakfast.jpg);
+}
+
+.col-2 #lunch {
+    background-image: url(salad.jpg);
+}
+
+.col-2 #dinner {
+    background-image: url(rice.jpg);
+}
+
+.col-2 .image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 575px;
+    width: 100%;
+    margin: 0 5px 0 5px;
+}
+
+.col-2 .image h4 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.col-2 .image h4:first-child {
+    padding: 15px 20px;
+    margin-bottom: 48px;
+    background-color: white;
+}
+
+.col-2 .image h4:last-child {
+    padding: 15px 20px;
+    padding-left: 25%;
+    background-color: limegreen;
+}
+
+@media only screen and (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+        margin: 50px 0 50px 0;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+    }
+    
+    .col-2 .image {
+        width: 77%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav ul {
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+            overflow: hidden;
+            transition: 0.5s;
+    }
+
+    .content {
+        flex-direction: column;
+        margin: 100px 0 50px 0;
+    }
+
+    .col-2 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-top: 30px;
+    }
+
+    .col-2 .image {
+        width: 77%;
+        margin: 20px 0 0 0;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+    }
+
+    .col-1 h2 {
+        font-size: 54px;
+    }
+
+    .col-1 p {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .col-2 .image {
+        width: 100%;
+    }
+}
