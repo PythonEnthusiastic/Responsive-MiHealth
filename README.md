@@ -1,1 +1,1 @@
-A responsive website MiHealth
+A responsive website called MiHealth
